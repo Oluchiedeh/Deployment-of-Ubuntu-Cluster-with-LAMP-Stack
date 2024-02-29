@@ -30,8 +30,10 @@ The terminal is installed as a default, just open it.
 - Connect to the instance by running.
 
   `ssh -i "project-server.pem" ec2-user@ec2-52-23-196-199.compute-1.amazonaws.com`.
+  
+  
 
-  -
+  ![](ssh-page.png)
   
   
   
