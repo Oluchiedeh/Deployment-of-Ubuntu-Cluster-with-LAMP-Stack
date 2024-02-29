@@ -232,4 +232,48 @@ http://18.233.160.211:80
 
 # STEP 5 - ENABLE PHP ON THE WEBSITE.
 
+By default, Apache prioritizes the index.html file over index.php in the DirectoryIndex settings. This setup is beneficial for deploying maintenance pages within PHP applications. By temporarily creating an index.html file with informative content for visitors, it becomes the default landing page due to its precedence over index.php. After completing maintenance tasks, simply renaming or removing the index.html file from the document root restores the regular application page.
 
+To alter this behavior, you must adjust the order of files listed in the DirectoryIndex directive within the /etc/apache2/mods-enabled/dir.conf file.
+
+`sudo nano /etc/apache2/mods-enabled/dir.conf`
+
+<IfModule mod_dir.c>
+ 
+#Change this:
+
+#DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+#To this:
+
+DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+
+</IfModule>
+
+
+Save and close the file, then reload;
+
+`sudo systemctl reload apache2`
+
+Finally, create a PHP script to test that PHP is correctly installed and configured on your server.
+
+Now, that we have a custom location to host your website's files and folders, we'll create a PHP test script to confirm that Apache can handle and process requests for PHP files.
+
+Create a new file named index.php inside your custom web root folder:
+
+`nano /var/www/projectlamp/index.php`
+
+Paste the below instructions on it;
+
+<?php
+
+phpinfo();
+
+Once done save the changes (ctrl + O) "Enter" and close the file (ctrl + X).
+
+Refresh your browser and you will see the below page on display.
+
+Congratulations, you made it this far. Deployed a LAMP stack website in AWS Cloud!!!
+
+Conclusion:
+
+The LAMP stack has stood the test of time as a reliable and versatile foundation for web development. Its combination of Linux, Apache, MySQL, and PHP/Python/Perl offers a powerful platform for building scalable, high-performance web applications. While alternative stacks have emerged, the LAMP stack remains a popular choice among developers, a testament to its enduring relevance in the ever-evolving landscape of web development.
