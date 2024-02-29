@@ -91,11 +91,15 @@ We have a web server up and running, you need to install a Database Management S
 
 `sudo apt install mysql-server`
 
+
 **Once installation is completed, Log in.**
 
 `sudo mysql`
 
 This will connect to the MySQL server as the administrative database user root. You should see output like this:
+
+![](login.png)
+
 
 **Secure the script.**
 
@@ -117,8 +121,14 @@ This will ask if you want to configure the VALIDATE PASSWORD PLUGIN.
 For the rest of the questions, press Y and hit the ENTER key at each prompt. This will prompt you to change the root password,
 remove some anonymous users and the test database, disable remote root logins, and load these new rules so that MySQL immediately respects the changes you have made.
 
+![](config.png)
+
+
 **When you're finished, test if you're able to log in to the MySQL console by typing and exit:**
 
 `sudo mysql -p`
 
 `exit`
+
+
+![](exit.png)
