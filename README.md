@@ -83,3 +83,42 @@ http://(Public-IP-Address)
 You can get your Public IP Address on the AWS EC2 console.
 
 
+# STEP 2 - INSTALLING MYSQL.
+
+We have a web server up and running, you need to install a Database Management System (DBMS) to be able to store and manage data for your website in a relational database (A relational database is a type of database that organizes data into tables, where each table represents a collection of related data entries). MySQL is a popular relational database management system used within PHP environments. Other relational databases are; PostgreSQL, Oracle Database, Microsoft SQL Server, and SQLite.
+
+**To acquire and install this software we will be using apt.**
+
+`sudo apt install mysql-server`
+
+**Once installation is completed, Log in.**
+
+`sudo mysql`
+
+This will connect to the MySQL server as the administrative database user root. You should see output like this:
+
+**Secure the script.**
+
+It's recommended that you run a security script that comes pre-installed with MySQL. This script will remove some insecure default settings and lock down access to your database system. Before running the script you will set a password for the root user, using mysql_native_password as the default authentication method. We're defining this user's password as PassWord.1.
+
+`ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWORD.1';`
+
+**Exit the MySQL shell with:**
+
+`exit`
+
+**Start the interactive script by running:**
+
+`sudo mysql_secure_installation`
+
+This will ask if you want to configure the VALIDATE PASSWORD PLUGIN.
+**Press 'N'**
+
+For the rest of the questions, press Y and hit the ENTER key at each prompt. This will prompt you to change the root password,
+remove some anonymous users and the test database, disable remote root logins, and load these new rules so that MySQL immediately respects the changes you have made.
+
+**When you're finished, test if you're able to log in to the MySQL console by typing and exit:**
+
+`sudo mysql -p`
+
+`exit`
