@@ -48,5 +48,15 @@ Apache serves web pages and other content over the internet. Apache processes in
 
 Install Apache using Ubuntu's package manager 'apt':
   
-  
-  
+**Update a list of packages in the package manager.**
+
+`sudo apt update`
+
+**Run Apache2 package installation.**
+
+`sudo apt install apache2`
+
+
+**To verify that apache2 is running as a Service in our OS, use the following command.**
+
+`sudo systemctl status apache2`
