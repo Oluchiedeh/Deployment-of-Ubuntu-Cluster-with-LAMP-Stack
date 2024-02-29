@@ -1,5 +1,18 @@
 # Deployment-of-Ubuntu-Cluster-with-LAMP-Stack
 
+**Introduction**
+As a devOps engineer, everthing you do is around software, website, application etc. So, there are different stack of technologies that make different solution possible, which are called WEB STACK. Web stack as also known as software stacks or technology stacks, which are used in web development to provide a cohesive set of technologies and tools for building web applications.
+Exaamples of web stacks are listed below with it's different acronymns; 
+- LAMP (Linux, Apache, MySQL, PHP or Python or Perl)
+- LEMP (Linux, Nginx, MySQL, PHP or Python, or Perl)
+- MERN (MongoDB, ExpressJS, ReactJS, NodeJS)
+- MEAN (MongoDB, ExpressJS, AngularJS, NodeJS)
+
+For this project, we will focus on LAMP web stack.
+
+Further studies: 
+
+
 **Prequisite:**
 
 AWS account and a virtual machine with an Ubuntu server.
