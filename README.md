@@ -65,3 +65,17 @@ Install Apache using Ubuntu's package manager 'apt':
 `sudo systemctl status apache2`
 
 ![](activeaapache.png)
+
+
+Before we can receive any traffic from our Web Server, we need to open TCP port 80 which is the default port that web browsers use to access web pages on the Internet
+
+As we know, we have TCP port 22 open by default on our EC2 machine to access it via SSH, so we need to add a rule to the EC2 configuration
+to open an inbound connection through port 80: Open inbound port 80 - http - Anywhere from IPV4 on your security rule.
+
+Now it is time for us to test how our Apache HTTP server can respond to requests from the Internet.
+
+Open a web browser of your choice and try to access the following URL
+
+http://(Public-IP-Address)
+
+You can get your Public IP Address on the AWS EC2 console.
