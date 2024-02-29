@@ -250,6 +250,9 @@ DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 </IfModule>
 
 
+![](HOST.png)
+
+
 Save and close the file, then reload;
 
 `sudo systemctl reload apache2`
@@ -268,12 +271,23 @@ Paste the below instructions on it;
 
 phpinfo();
 
+![](PHP2.png)
+
 Once done save the changes (ctrl + O) "Enter" and close the file (ctrl + X).
 
 Refresh your browser and you will see the below page on display.
 
 Congratulations, you made it this far. Deployed a LAMP stack website in AWS Cloud!!!
 
+![](phppage.png)
+
 Conclusion:
 
 The LAMP stack has stood the test of time as a reliable and versatile foundation for web development. Its combination of Linux, Apache, MySQL, and PHP/Python/Perl offers a powerful platform for building scalable, high-performance web applications. While alternative stacks have emerged, the LAMP stack remains a popular choice among developers, a testament to its enduring relevance in the ever-evolving landscape of web development.
+
+
+
+
+
+
+
