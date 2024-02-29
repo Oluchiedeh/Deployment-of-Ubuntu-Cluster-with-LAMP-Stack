@@ -146,3 +146,5 @@ Core PHP packages will automatically be installed as dependencies.
 **Confirm the version.**
 
 `php -v`
+
+![](php.png)
