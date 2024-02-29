@@ -52,11 +52,16 @@ Install Apache using Ubuntu's package manager 'apt':
 
 `sudo apt update`
 
+![](update.png)
+
 **Run Apache2 package installation.**
 
 `sudo apt install apache2`
 
+![](installation.png)
 
 **To verify that apache2 is running as a Service in our OS, use the following command.**
 
 `sudo systemctl status apache2`
+
+![](activeaapache.png)
