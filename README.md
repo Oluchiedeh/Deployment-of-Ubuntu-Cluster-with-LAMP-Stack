@@ -34,6 +34,19 @@ The terminal is installed as a default, just open it.
   
 
   ![](ssh-page.png)
+
+
+**Next, configure the created EC2 Instance machine to serve a web server.**
+
+  
+# Step 1: INSTALLING APACHE AND UPDATING THE FIREWALL.
+
+Apache, also known as Apache HTTP Server, is a widely used open-source web server software. It is maintained and developed by the Apache Software Foundation, a community of developers that collaborates on various open-source projects.
+
+Apache serves web pages and other content over the internet. Apache processes incoming requests from web clients (such as web browsers), and delivers the requested content, which includes HTML pages, images, videos, or other files.
+
+
+Install Apache using Ubuntu's package manager 'apt':
   
   
   
