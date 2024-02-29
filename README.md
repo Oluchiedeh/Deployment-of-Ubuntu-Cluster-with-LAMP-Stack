@@ -148,3 +148,69 @@ Core PHP packages will automatically be installed as dependencies.
 `php -v`
 
 ![](php.png)
+
+
+# STEP 4 - CREATE A VIRTUAL HOST FOR YOUR WEBSITE USING APACHE.
+
+**Set your domain name.**
+
+Apache on Ubuntu 20.04 has one server block enabled by default that is configured to serve documents from the /var/www/html directory. We will leave this configuration as is and will add our directory next to the default one.
+
+**Create the directory for projectlamp using the 'mkdir' command as follows:**
+
+`sudo mkdir /var/www/projectlamp`
+
+**Next, assign ownership of the directory to your current system user:**
+
+`sudo chown -R $USER:$USER /var/www/projectlamp`
+
+**create and open a new configuration file in Apache's sites available using 'nano'.**
+
+`sudo nano /etc/apache2/sites-available/projectlamp.conf`
+
+This will create a new blank file. Paste in the following bare-bones configuration:
+
+<VirtualHost *:80>
+    ServerName projectlamp
+    ServerAlias www.projectlamp 
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/projectlamp
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+**Use the ls command to show the new file in the sites-available directory.**
+
+`sudo ls /etc/apache2/sites-available`
+
+**The outcome;**
+
+000-default.conf  default-ssl.conf  projectlamp.conf
+
+**Input the a2ensite command to enable the new virtual host:**
+
+`sudo a2ensite projectlamp`
+
+**Disable the default website;**
+
+`sudo a2dissite 000-default`
+
+**To check syntax errors;**
+
+`sudo apache2ctl configtest`
+
+**Reload apache;**
+
+`sudo systemctl reload apache2`
+
+Now, write into the web root directory file by creating an index.html file and write the below command;
+
+`sudo echo 'Hello LAMP from hostname' $(curl -s http://18.233.160.211/latest/meta-date public-hostname) 'with public IP' $(curl -s http://18.233.160.211/latest/meta-date/public-ipv4)> /var/www/projectlamp.index.html`
+
+I also edited some content on the index.html using the below command;
+
+`nano index.html`
+
+Now go to your browser and try to open your website URL using the IP address:
+
+http://18.233.160.211:80
