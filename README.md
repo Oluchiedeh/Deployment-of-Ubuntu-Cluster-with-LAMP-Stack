@@ -78,4 +78,8 @@ Open a web browser of your choice and try to access the following URL
 
 http://(Public-IP-Address)
 
+![](apache.png)
+
 You can get your Public IP Address on the AWS EC2 console.
+
+
