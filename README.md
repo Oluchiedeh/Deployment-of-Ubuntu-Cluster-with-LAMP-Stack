@@ -187,6 +187,7 @@ This will create a new blank file. Paste in the following bare-bones configurati
     
  </VirtualHost>
  
+![](nanoconf.png)
 
 **Use the ls command to show the new file in the sites-available directory.**
 
@@ -212,6 +213,8 @@ This will create a new blank file. Paste in the following bare-bones configurati
 
 `sudo systemctl reload apache2`
 
+![](v-h.png)
+
 Now, write into the web root directory file by creating an index.html file and write the below command;
 
 `sudo echo 'Hello LAMP from hostname' $(curl -s http://18.233.160.211/latest/meta-date public-hostname) 'with public IP' $(curl -s http://18.233.160.211/latest/meta-date/public-ipv4)> /var/www/projectlamp.index.html`
@@ -224,4 +227,9 @@ Now go to your browser and try to open your website URL using the IP address:
 
 http://18.233.160.211:80
 
-# STEP 5 - ENABLE PHP ON THE WEBSITE
+![](newsite.png)
+
+
+# STEP 5 - ENABLE PHP ON THE WEBSITE.
+
+
