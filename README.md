@@ -170,14 +170,23 @@ Apache on Ubuntu 20.04 has one server block enabled by default that is configure
 
 This will create a new blank file. Paste in the following bare-bones configuration:
 
+
 <VirtualHost *:80>
+
     ServerName projectlamp
+    
     ServerAlias www.projectlamp 
+    
     ServerAdmin webmaster@localhost
+    
     DocumentRoot /var/www/projectlamp
+    
     ErrorLog ${APACHE_LOG_DIR}/error.log
+    
     CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
+    
+ </VirtualHost>
+ 
 
 **Use the ls command to show the new file in the sites-available directory.**
 
@@ -214,3 +223,5 @@ I also edited some content on the index.html using the below command;
 Now go to your browser and try to open your website URL using the IP address:
 
 http://18.233.160.211:80
+
+# STEP 5 - ENABLE PHP ON THE WEBSITE
