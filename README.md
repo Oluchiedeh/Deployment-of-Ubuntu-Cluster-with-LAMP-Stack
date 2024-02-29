@@ -10,10 +10,7 @@ Examples of web stacks are listed below with their different acronyms; 
 - MEAN (MongoDB, ExpressJS, AngularJS, NodeJS)
 For this project, we will focus on the LAMP web stack.
 
-Further studies: 
-
-
-**Prequisite:**
+**Prerequisite:**
 
 AWS account and a virtual machine with an Ubuntu server.
 
@@ -22,7 +19,7 @@ Spinning up a new EC2 instance (an instance of a virtual server) Click [HERE](ht
 # Connecting to EC2 terminal/ Using the terminal on MAC/Linux.
 
 The terminal is installed as a default, just open it.
-- Navigate to where you downloaded youe key pair on your system, with this command:
+- Navigate to where you downloaded your key pair on your system, with this command:
 
  `cd download`.
 
